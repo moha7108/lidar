@@ -1,7 +1,11 @@
 import json
 from rplidar import RPLidar
 
-RELEVANT_ANGLES = [0:,90,180,270]
+RELEVANT_ANGLES = [0,90,180,270]
+Front_angles = []
+Back_angles = []
+left_angles = []
+right_angles = []
 
 lidar = RPLidar('/dev/ttyUSB0')
 
@@ -16,14 +20,15 @@ while True:
 
             for measurement in scan:
                 quality, angle, distance = measurement
-                relevant_out = {"quality": quality, "angle": angle, "distance": distance}
+                angle = int(angle)
+                # relevant_out = {"quality": quality, "angle": angle, "distance": distance}
                 
-                print(json.dumps(relevant_out))
+                # print(json.dumps(relevant_out))
 
-                # if angle in RELEVANT_ANGLES:
-                #     relevant_out = {"quality": quality, "angle": angle, "distance": distance}
+                if angle in RELEVANT_ANGLES:
+                    relevant_out = {"quality": quality, "angle": angle, "distance": distance}
                 
-                #     print(json.dumps(relevant_out))
+                    print(json.dumps(relevant_out))
 
     except KeyboardInterrupt:
         print('Stopping.')
