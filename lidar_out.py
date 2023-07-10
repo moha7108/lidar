@@ -23,7 +23,7 @@ while True:
                 angle = int(angle)
                 # relevant_out = {"quality": quality, "angle": angle, "distance": distance}
                 
-                print(json.dumps(relevant_out))
+                # print(json.dumps(relevant_out))
 
                 if angle in RELEVANT_ANGLES:
                     relevant_out = {"quality": quality, "angle": angle, "distance": distance}
