@@ -1,0 +1,12 @@
+[Unit]
+Description= display stdout of relevant lidar readings
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python3 /home/pi/lidar/lidar_out.py
+User=pi
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
