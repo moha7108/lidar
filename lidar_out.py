@@ -1,11 +1,11 @@
 import json
 from rplidar import RPLidar
 
-RELEVANT_ANGLES = [180] 
+RELEVANT_ANGLES = [1] 
 Front_angles = []#270
 Back_angles = []#90
 left_angles = []
-right_angles = []
+right_angles = []#180
 
 lidar = RPLidar('/dev/ttyUSB0')
 
