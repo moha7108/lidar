@@ -18,9 +18,9 @@ while True:
                 quality, angle, distance = measurement
 
                 if angle in RELEVANT_ANGLES:
-                    output = {"quality": quality, "angle": angle, "distance": distance}
+                    relevant_out = {"quality": quality, "angle": angle, "distance": distance}
                 
-            print(json.dumps(output))
+            print(json.dumps(relevant_out))
 
     except KeyboardInterrupt:
         print('Stopping.')
