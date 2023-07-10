@@ -1,7 +1,7 @@
 import json
 from rplidar import RPLidar
 
-RELEVANT_ANGLES = [0] 
+RELEVANT_ANGLES = [180] 
 Front_angles = []#270
 Back_angles = []#90
 left_angles = []
